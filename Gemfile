@@ -4,13 +4,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "2.7.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.0.7"
+gem "rails", "~> 7.0.7", ">= 7.0.7.2"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-# Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
+# Use postgresql as the database for Active Record
+gem "pg", "~> 1.1"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -28,22 +28,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
-gem "redis", "~> 4.0"
-
-# todo this gem is used to create the dummy data for devise
-gem 'faker'
-
-# todo this will provide the search functionality
-gem 'ransack'
-
-gem 'devise'
-
-# for pagination
-gem 'kaminari'
-
-# todo this will add css framework
-gem 'cssbundling-rails'
-
+# gem "redis", "~> 4.0"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -56,6 +41,18 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
+
+# for test user for devise
+gem 'faker'
+
+#  for search fucntionaly
+gem 'ransack'
+
+gem 'devise'
+
+gem 'kaminari'
+
+gem 'cssbundling-rails'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
