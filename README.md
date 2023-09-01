@@ -11,25 +11,17 @@ rails css:install:bootstrap
 <!-- todo  add bootstrap dependency in rails -->
 ./bin/importmap pin bootstrap
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<!-- todo to install devise -->
+rails g devise:install
 
-Things you may want to cover:
+<!-- todo copy this line in development.rb -->
+config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
-* Ruby version
+<!-- our attributes will be added along with the avaliable one -->
+<!-- todo now we want to generate the custom devise properties -->
+rails g devise user first_name last_name dob:date username state city country address profile_title detail:text
 
-* System dependencies
+rails g migration  add_contact_number_to_users contact_no : string
 
-* Configuration
+<!-- todo using faker gem we can use the huge amount of data for testing purpose -->
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

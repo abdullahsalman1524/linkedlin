@@ -1,2 +1,36 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<%# todo search html is here %>
+<br><br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+    <div class="input-group rounded">
+      <input type="search" class="form-control rounded" placeholder="Search by city or country" aria-label="Search" aria-describedby="search-addon" />
+      <span class="input-group-text border-0" id="search-addon">
+        <i class="fas fa-search"></i>
+      </span>
+    </div>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
+
+<br><br>
+<div class="container">
+  <div class="row">
+    <%= @user.each do |user| %>
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <%= image_tag "userimage" %>
+          <div class="card-body">
+            <h5 class="card-title"><%= user.first_name %></h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+      </div>
+    </div>
+     <br><br>
+    <%end%>
+
+  </div>
+</div>
