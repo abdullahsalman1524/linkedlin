@@ -1,16 +1,16 @@
-<%# todo search html is here %>
+
 <br><br>
 <div class="container">
   <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
     <div class="input-group rounded">
-      <input type="search" class="form-control rounded" placeholder="Search by city or country" aria-label="Search" aria-describedby="search-addon" />
-      <span class="input-group-text border-0" id="search-addon">
-        <i class="fas fa-search"></i>
-      </span>
+      <%= search_form_for @q, url: root_path do |form| %>
+        <%= form.search_field :city_or_country_cont, class: "form-control", placeholder: "Search by city or country", aria: { describedby: "search-addon" } %>
+        <%= form.submit "Search", class:"btn btn-primary", id: "search-addon" %>
+      <% end %>
     </div>
-    </div>
+
     <div class="col-md-2"></div>
   </div>
 </div>
@@ -19,7 +19,7 @@
 <div class="container">
   <div class="row">
     <%= @user.each do |user| %>
-      <div class="col-md-4">
+      <div class="col-md-4 mb-4">
         <div class="card" style="width: 18rem;">
           <%= image_tag "userimage" %>
           <div class="card-body">
@@ -29,8 +29,9 @@
           </div>
       </div>
     </div>
-     <br><br>
+
     <%end%>
 
   </div>
+  <br><br>
 </div>

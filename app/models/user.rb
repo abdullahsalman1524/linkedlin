@@ -16,4 +16,13 @@ class User < ApplicationRecord
     "Cybersecurity Experts",
     "UI/UX Designers"
   ].freeze
+
+
+  def self.ransackable_attributes(auth_object = nil)
+    ["city", "country"]
+  end
+
+  def self.ransackable_associations(auth_object = nil)
+    []
+  end
 end
