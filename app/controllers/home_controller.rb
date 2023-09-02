@@ -3,6 +3,4 @@ class HomeController < ApplicationController
     @q = User.ransack(params[:q])
     @user = @q.result.limit(25)
   end
-
-  
 end

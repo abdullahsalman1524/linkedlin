@@ -17,12 +17,11 @@ class User < ApplicationRecord
     "UI/UX Designers"
   ].freeze
 
-
-  def self.ransackable_attributes(auth_object = nil)
+  def self.ransackable_attributes(_auth_object = nil)
     ["city", "country"]
   end
 
-  def self.ransackable_associations(auth_object = nil)
+  def self.ransackable_associations(_auth_object = nil)
     []
   end
 end

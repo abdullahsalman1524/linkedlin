@@ -25,3 +25,5 @@ rails g migration  add_contact_number_to_users contact_no : string
 
 <!-- todo using faker gem we can use the huge amount of data for testing purpose -->
 
+<!-- lec 13 start from here -->
+how to use data actions target and values in lec 13  stimulus
